@@ -1,0 +1,19 @@
+.navigation {
+  width: 100%;
+
+  margin-bottom: 40px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 323px;
+
+    margin: auto;
+  }
+}
