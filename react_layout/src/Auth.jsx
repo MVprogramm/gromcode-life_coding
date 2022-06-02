@@ -7,8 +7,7 @@ import Spinner from "./Spinner";
 // 1. show "LOGIN" by default
 // 2. after "LOGIN" click Spinner for 3 seconds
 // 3. in 3 sec hide Spinner, show "LOGOUT"
-// 4. after "LOGOUT" click Spinner for 3 seconds
-// 5. in 3 sec hide Spinner, show "LOGIN"
+// 4. after "LOGOUT" click show "LOGIN"
 
 class Auth extends React.Component {
   state = {
@@ -31,15 +30,8 @@ class Auth extends React.Component {
 
   logoutHandler = () => {
     this.setState({
-      isProcessing: true,
+      isLoggedIn: false,
     });
-
-    setTimeout(() => {
-      this.setState({
-        isProcessing: false,
-        isLoggedIn: false,
-      });
-    }, 2000);
   };
 
   render() {
